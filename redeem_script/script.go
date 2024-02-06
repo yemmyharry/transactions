@@ -19,7 +19,7 @@ func GetRedeemScript(preimage string) string {
 	hashHex := hex.EncodeToString(hashBytes)
 	//OP_SHA256 = 0xa8
 	//OP_EQUAL= 87
-	redeemScript := "a8" + hashHex + "88"
+	redeemScript := "a8" + hashHex + "87"
 
 	fmt.Println("Redeem script (hex):", redeemScript)
 
