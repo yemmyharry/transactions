@@ -4,9 +4,8 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
-	"log"
-
 	"github.com/btcsuite/btcd/wire"
+	"log"
 )
 
 func decodeTransaction(rawTransactionHex string) {
@@ -30,8 +29,8 @@ func decodeTransaction(rawTransactionHex string) {
 	for _, input := range transaction.TxIn {
 		fmt.Printf("  Transaction Hash : %s\n", input.PreviousOutPoint.Hash)
 		fmt.Printf("  Output Index: %d\n", input.PreviousOutPoint.Index)
-		fmt.Printf("  Script Signature: %x\n", string(input.SignatureScript))
-		fmt.Printf("  Sequence %v \n", input.Sequence)
+		fmt.Printf("  Script Signature: %v\n", input.SignatureScript)
+		fmt.Printf("  Sequence %d \n", input.Sequence)
 
 	}
 
